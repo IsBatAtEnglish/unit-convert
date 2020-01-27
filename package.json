@@ -1,0 +1,25 @@
+{
+    "name": "unit-converter",
+    "version": "1.0.0",
+    "description": "Simple, chainable unit converter",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "keywords": [
+        "unit",
+        "metric",
+        "imperial",
+        "converter",
+        "weight",
+        "mass",
+        "temperature"
+    ],
+    "scripts": {
+        "prepublish": "tsc",
+        "build": "tsc"
+    },
+    "author": "IsBadAtEnglish",
+    "license": "MIT",
+    "devDependencies": {
+        "typescript": "^3.7.5"
+    }
+}
