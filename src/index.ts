@@ -6,6 +6,11 @@ const convert = (originalValue: number, originalUnit: string) => {
         const fromUnit = Units[originalUnit]
         const toUnit = Units[newUnit]
         
+        if (!fromUnit)
+            throw new TypeError(`Unknown unit: ${originalUnit}`)
+        if (!toUnit)
+            throw new TypeError(`Unknown unit: ${newUnit}`)
+
         if (fromUnit.type !== toUnit.type)
             throw new TypeError(`Units provided are not from the same type. Attempted to convert `+
             `${originalValue}${originalUnit} (${fromUnit.type}) to ${newUnit} (${toUnit.type})`)
