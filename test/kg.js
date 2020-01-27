@@ -5,6 +5,9 @@ describe('10kg', function() {
     it('should throw an Error when converted to an unknown unit', function() {
         assert.throws(() => convert(10, 'kg').to('coal'))
     })
+    it('should recognize plural units (e.g. lbs => lb)', function() {
+        assert.equal(Math.floor(convert(10, 'kgs').to('lbs')), 22)
+    })
     it('should be roughly 22 pounds', function() {
         assert.equal(Math.floor(convert(10, 'kg').to('lb')), 22)
     })
