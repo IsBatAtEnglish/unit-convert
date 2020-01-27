@@ -8,6 +8,12 @@ describe('10kg', function() {
     it('should recognize plural units (e.g. lbs => lb)', function() {
         assert.equal(Math.floor(convert(10, 'kgs').to('lbs')), 22)
     })
+    it('should equal 10000 grams', function() {
+        assert.equal(convert(10, 'kg').to('g'), 10000)
+    })
+    it('should equal 10000000 milligrams', function() {
+        assert.equal(convert(10, 'kg').to('mg'), 10000000)
+    })
     it('should be roughly 22 pounds', function() {
         assert.equal(Math.floor(convert(10, 'kg').to('lb')), 22)
     })
