@@ -5,7 +5,12 @@ interface Unit {
 
 const Units: { [key: string]: Unit } = {
     'kg': { type: 'mass', convert: 1 },
-    'lbs': { type: 'mass', convert: 0.45359237 }
+    'lb': { type: 'mass', convert: 0.45359237 },
+    'gr': { type: 'mass', convert: 0.00006479891 },
+    'oz': { type: 'mass', convert: 0.028349523125 },
+    'st': { type: 'mass', convert: 6.35029318 },
+    'qr': { type: 'mass', convert: 12.70058636 },
+    'cwt': { type: 'mass', convert: 50.80234544 }
 }
 
 export default Units

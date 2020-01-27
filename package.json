@@ -1,5 +1,5 @@
 {
-    "name": "unit-converter",
+    "name": "unit-convert",
     "version": "0.0.1",
     "description": "Simple, quick & dirty unit converter",
     "main": "dist/index.js",
