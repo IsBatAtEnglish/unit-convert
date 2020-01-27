@@ -1,7 +1,7 @@
 {
     "name": "unit-converter",
-    "version": "1.0.0",
-    "description": "Simple, chainable unit converter",
+    "version": "0.0.1",
+    "description": "Simple, quick & dirty unit converter",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "keywords": [
