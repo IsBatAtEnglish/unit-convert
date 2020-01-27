@@ -15,11 +15,14 @@
     ],
     "scripts": {
         "prepublish": "tsc",
-        "build": "tsc"
+        "build": "tsc",
+        "pretest": "npm run build",
+        "test": "mocha test/"
     },
     "author": "IsBadAtEnglish",
     "license": "MIT",
     "devDependencies": {
+        "mocha": "^7.0.1",
         "typescript": "^3.7.5"
     }
 }
