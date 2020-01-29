@@ -34,8 +34,19 @@ describe('10kg', function() {
     })
 })
 
-describe('32oz', function() {
-    it('should be roughly 2 pounds', function() {
-        assert.equal(Math.floor(convert(32, 'oz').to('lb')), 2)
+describe('syntax', function() {
+    it('should support chainable syntax', function() {
+        const result = convert(10).from('kg').to('g')
+        assert.equal(result, 10000)
+    })
+
+    it('should support default syntax', function() {
+        const result = convert(10, 'kg').to('g')
+        assert.equal(result, 10000)
+    })
+
+    it('should support short syntax', function() {
+        const result = convert(10, 'kg', 'g')
+        assert.equal(result, 10000)
     })
 })
