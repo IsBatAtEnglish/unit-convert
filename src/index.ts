@@ -7,16 +7,26 @@ const removePlural = (str: string): string =>
     isPlural(str) ? str.substring(0, str.length-1) : str
 
 /**
- * convert(10)
- *  .from('lbs')
- *  .to('kg')
- * 
- * convert(10, 'lbs', 'kg')
- * 
- * convert(10, 'lbs').to('kg')
+ * Chainable syntax
+ * @param value The numeric value to be converted
  */
+function convert(value: number): { from(unit: string): { to(newUnit: string): number } }
+/**
+ * Default syntax
+ * @param value The numeric value to be converted
+ * @param unit The original unit
+ */
+function convert(value: number, unit: string): { to(newUnit: string): number }
+/**
+ * Quick syntax
+ * @param value The numeric value to be converted
+ * @param unit The original unit
+ * @param toUnit The target unit
+ */
+function convert(value: number, unit: string, toUnit: string): number
 
-const convert = (value: number|string, unit?: string, toUnit?: string) => {
+
+function convert(value: number, unit?: string, toUnit?: string) {
     let operand: number = parseFloat(value.toString())
     let originalUnit: string = unit
     
@@ -59,7 +69,7 @@ const convert = (value: number|string, unit?: string, toUnit?: string) => {
         return { to }
 
     // Chainable syntax: convert(10).from('lbs').to('kg')
-    return { from, to }
+    return { from }
 }
 
 export default convert
